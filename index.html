@@ -107,12 +107,12 @@
         }
 
         function prepareButton() {
-            var a = document.createElement('a');
+            var a = document.createElement('button');
             var linkText = document.createTextNode("Open App");
             a.appendChild(linkText);
             a.className = "lauch-btn";
             a.title = "Open The App";
-            a.setAttribute('href', applink);
+//             a.setAttribute('href', applink);
             a.onClick = store_or_close;
             document.body.appendChild(a);
             lauchButton = a;
