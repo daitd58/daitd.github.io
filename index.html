@@ -113,7 +113,7 @@
             a.className = "lauch-btn";
             a.title = "Open The App";
 //             a.setAttribute('href', applink);
-            a.onClick = store_or_close;
+            a.addEventListener('click', store_or_close);
             document.body.appendChild(a);
             lauchButton = a;
         } 
