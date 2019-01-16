@@ -79,7 +79,6 @@
     </head>
     <body >
         <script>
-        var isTwisterWebView = window.location.href.includes('lauch=manual');
         var uagent = navigator.userAgent.toLowerCase();
         var isAndroid = uagent.search("android") > -1;
         var isIos = uagent.search("iphone") > -1;
@@ -93,49 +92,28 @@
         if( isIos ) {
             storeLink = "https://itunes.apple.com/fr/app/bee-the-move/id1390279708?mt=8";
         }
-        function prepareFrame() {
-            var ifrm = document.createElement("iframe");
-            ifrm.setAttribute("src", applink);
-            ifrm.style.width = "0";
-            ifrm.style.height = "0";
-            ifrm.style.display =  "none";
-            document.body.appendChild(ifrm);
-        }
         function prepareButton() {
             var a = document.createElement('button');
             var linkText = document.createTextNode("Open App");
             a.appendChild(linkText);
             a.className = "lauch-btn";
             a.title = "Open The App";
-//             a.setAttribute('href', applink);
             a.addEventListener('click', store_or_close);
             document.body.appendChild(a);
-            lauchButton = a;
         } 
         function try_close(){
             location.replace('about:blank');
         }
         function store_or_close(){
             var now = Date.now();
-            if (now - start > 3000) {
-                try_close();
-            } else {
-                setTimeout(function () { window.location = storeLink; }, 2500);
-        	    window.location = applink; 
-            }
+            setTimeout(function () { window.location = storeLink; }, 2500);
+        	window.location = applink; 
         }
         function androidRun() {
             prepareButton();
-            if( isTwisterWebView ) {
-                prepareFrame();
-                setInterval(store_or_close, 2000);
-            }
         }
         function iosRun() {
             prepareButton();
-            if( isTwisterWebView ) {
-                setInterval(store_or_close, 2000);
-            }
         }
         function webRun() {
             window.location.replace(homeLink);
