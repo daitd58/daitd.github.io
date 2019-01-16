@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Share User - Bee The Move</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta property="og:url" content="https://bee-the-move.com/shared/socialShare/user?idUser=5bdfca3f0b80e70019ef08d5&amp;fbrefresh=1547610438336" />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Bee The Move" />
-        <meta property="og:title" content="Tuan Anh - Bee The Move" />
-        <meta property="og:description" content="Je vous invite à decouvrir ce profil." />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="315" />
-        <meta property="og:image" content="https://bee-the-move.com/share/image.php?url=https://s3.eu-west-3.amazonaws.com/beethemove/upload1547610438336.png" />
-        <meta property="og:image:url" content="https://bee-the-move.com/share/image.php?url=https://s3.eu-west-3.amazonaws.com/beethemove/upload1547610438336.png" />
-        <meta property="og:image:secure_url" content="https://bee-the-move.com/share/image.php?url=https://s3.eu-west-3.amazonaws.com/beethemove/upload1547610438336.png" />
-        <meta property="og:image:alt" content="Tuan Anh  - Bee The Move" />
-        <meta property="fb:app_id" content="763040783780161" />
-        <meta property="og:locale" content="fr_FR" />
-        <meta property="article:author" content="https://www.facebook.com/Bee-The-Move-121105938752595/" />
-        <meta property="article:section" content="Share" />
-        <meta property="al:ios:url" content="http://bee-the-move.com/apple-app-site-association" />
-        <meta property="al:web:should_fallback" content="false" />
-        <meta property="al:ios:app_name" content="BeeTheMove" />
-        <meta property="al:ios:app_store_id" content="1390279708" />
-        <meta property="al:android:url" content="https://bee-the-move.com/shared/socialShare/user?idUser=5bdfca3f0b80e70019ef08d5&amp;fbrefresh=1547610438336" />
-        <meta property="al:android:app_name" content="BeeTheMove" />
-        <meta property="al:android:package" content="com.beethemove.btm" />
-        <meta name="twitter:app:name:iphone" content="BeeTheMove">
-        <meta name="twitter:app:url:iphone" content="http://bee-the-move.com//apple-app-site-association" />
-        <meta name="twitter:app:id:iphone" content="1390279708">
-        <meta name="twitter:app:url:ipad" content="http://bee-the-move.com//apple-app-site-association" />
-        <meta name="twitter:app:name:ipad" content="BeeTheMove" />
-        <meta name="twitter:app:id:ipad" content="1390279708">
-        <meta name="twitter:app:country" content="FR" />
-        <meta name="twitter:app:name:googleplay" content="BeeTheMove">
-        <meta name="twitter:app:id:googleplay" content="com.beethemove.btm">
-        <meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.beethemove.btm">
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@bee_the_move" />
-        <meta name="twitter:title" content="Tuan Anh  - Bee The Move" />
-        <meta name="twitter:description" content="Je vous invite à decouvrir ce profil." />
-        <meta name="twitter:image" content="https://bee-the-move.com/share/image.php?url=https://s3.eu-west-3.amazonaws.com/beethemove/upload1547610438336.png" />
-        <meta name="twitter:image:alt" content="Je vous invite à decouvrir ce profil." />
-        <meta name="twitter:url" content="https://bee-the-move.com/shared/socialShare/user?idUser=5bdfca3f0b80e70019ef08d5&amp;fbrefresh=1547610438336" />
-        <meta name="twitter:creator" content="@bee_the_move">
-        <meta name="twitter:domain" content="www.bee-the-move.com">
-        <style>
+
+<head>
+    <title>{{title}} - Bee The Move</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta property="og:url" content="{{link}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Bee The Move" />
+    <meta property="og:title" content="{{titlePub}} - Bee The Move" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:image" content="https://bee-the-move.com/share/image.php?url={{picture}}" />
+    <meta property="og:image:url" content="https://bee-the-move.com/share/image.php?url={{picture}}" />
+    <meta property="og:image:secure_url" content="https://bee-the-move.com/share/image.php?url={{picture}}" />
+    <meta property="og:image:alt" content="{{titlePub}}  - Bee The Move" />
+    <meta property="fb:app_id" content="{{app_id}}" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="article:author" content="https://www.facebook.com/Bee-The-Move-121105938752595/" />
+    <meta property="article:section" content="Share" />
+
+    <meta property="al:ios:url" content="http://bee-the-move.com/apple-app-site-association" />
+    <meta property="al:web:should_fallback" content="false" />
+    <meta property="al:ios:app_name" content="BeeTheMove" />
+    <meta property="al:ios:app_store_id" content="1390279708" />
+
+    <meta property="al:android:url" content="{{link}}" />
+    <meta property="al:android:app_name" content="BeeTheMove" />
+    <meta property="al:android:package" content="com.beethemove.btm" />
+
+    <meta name="twitter:app:name:iphone" content="BeeTheMove">
+    <meta name="twitter:app:url:iphone" content="http://bee-the-move.com//apple-app-site-association" />
+    <meta name="twitter:app:id:iphone" content="1390279708">
+    <meta name="twitter:app:url:ipad" content="http://bee-the-move.com//apple-app-site-association" />
+    <meta name="twitter:app:name:ipad" content="BeeTheMove" />
+    <meta name="twitter:app:id:ipad" content="1390279708">
+    <meta name="twitter:app:country" content="FR" />
+
+    <meta name="twitter:app:name:googleplay" content="BeeTheMove">
+    <meta name="twitter:app:id:googleplay" content="com.beethemove.btm">
+    <meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.beethemove.btm">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bee_the_move" />
+    <meta name="twitter:title" content="{{titlePub}}  - Bee The Move" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta name="twitter:image" content="https://bee-the-move.com/share/image.php?url={{picture}}" />
+    <meta name="twitter:image:alt" content="{{description}}" />
+    <meta name="twitter:url" content="{{link}}" />
+    <meta name="twitter:creator" content="@bee_the_move">
+    <meta name="twitter:domain" content="www.bee-the-move.com">
+    <style>
         .lauch-btn {
             position: absolute;
             margin: auto;
@@ -68,42 +75,32 @@
             transform: translate(-50%, -50%);
         }
     </style>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118078774-1"></script>
-        <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-118078774-1');
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118078774-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118078774-1');
     </script>
-    </head>
-    <body >
-        <script>
-        var isTwisterWebView = window.location.href.includes('lauch=manual');
+</head>
 
+<body >
+    <script>
         var uagent = navigator.userAgent.toLowerCase();
         var isAndroid = uagent.search("android") > -1;
         var isIos = uagent.search("iphone") > -1;
         var isWeb = !isAndroid && !isIos;
 
         var start = Date.now();
-        var shareLink = "https://bee-the-move.com/shared/socialShare/user?idUser=5bdfca3f0b80e70019ef08d5&amp;fbrefresh=1547610438336";
+        var shareLink = "{{link}}";
         var applink = shareLink.replace('https://', 'beethemove://');
-        var lauchButton = null;
         var homeLink = "http://bee-the-move.com/";
         var storeLink = "https://play.google.com/store/apps/details?id=com.beethemove.btm";
         if( isIos ) {
             storeLink = "https://itunes.apple.com/fr/app/bee-the-move/id1390279708?mt=8";
-        }
-
-        function prepareFrame() {
-            var ifrm = document.createElement("iframe");
-            ifrm.setAttribute("src", applink);
-            ifrm.style.width = "0";
-            ifrm.style.height = "0";
-            ifrm.style.display =  "none";
-            document.body.appendChild(ifrm);
         }
 
         function prepareButton() {
@@ -112,56 +109,43 @@
             a.appendChild(linkText);
             a.className = "lauch-btn";
             a.title = "Open The App";
-//             a.setAttribute('href', applink);
             a.addEventListener('click', store_or_close);
             document.body.appendChild(a);
-            lauchButton = a;
         } 
 
-        function try_close(){
+        function try_close() {
             location.replace('about:blank');
         }
 
-        function store_or_close(){
+        function store_or_close() {
             var now = Date.now();
-            if (now - start > 3000) {
-                try_close();
-            } else {
-                setTimeout(function () { window.location = storeLink; }, 2500);
-        	    window.location = applink; 
-            }
+            setTimeout(function () { window.location = storeLink; }, 2500);
+            window.location = applink;
         }
 
         function androidRun() {
             prepareButton();
-            if( isTwisterWebView ) {
-                prepareFrame();
-                setInterval(store_or_close, 2000);
-            }
         }
 
         function iosRun() {
             prepareButton();
-            if( isTwisterWebView ) {
-                setInterval(store_or_close, 2000);
-            }
         }
 
         function webRun() {
             window.location.replace(homeLink);
         }
 
-        function detectMobile(){
-
-                if (isAndroid)
-                    androidRun();
-                else if (isIos)
-                    iosRun();
-                else
-                    webRun();
+        function detectMobile() {
+            if (isAndroid)
+                androidRun();
+            else if (isIos)
+                iosRun();
+            else
+                webRun();
         }
 
         detectMobile();
     </script>
-    </body>
+</body>
+
 </html>
