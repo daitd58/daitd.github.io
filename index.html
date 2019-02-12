@@ -128,7 +128,12 @@
         });
 
         function store_or_close() {
-            timeout = window.setTimeout(function () { window.location = storeLink; }, 1000);
+            setTimeout(function() {
+                // If the user is still here, open the App Store
+                if (!document.webkitHidden) {
+                    window.location = storeLink;
+                }
+            }, 500);
         	window.location = applink;
         }
 
