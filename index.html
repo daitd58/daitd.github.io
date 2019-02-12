@@ -53,26 +53,34 @@
     <meta name="twitter:creator" content="@bee_the_move">
     <meta name="twitter:domain" content="www.bee-the-move.com">
     <style>
-        .lauch-btn {
+        .wrapper {
             position: absolute;
-            margin: auto;
             top: 50%;
             left: 50%;
-            -webkit-font-smoothing: antialiased;
-            background-color:#222;
-            border: none;
-            color: #fff;
-            display: inline-block;
+            width: 120px;
+            transform: translate(-50%, -50%);
+        }
+        button {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
             font-family: 'Montserrat', sans-serif;
             font-size: 16px;
-            font-weight: 100;
+            font-weight: 400;
             text-decoration: none;
-            user-select: none;
             letter-spacing: 1px;
+            -webkit-font-smoothing: antialiased;
+            border: none;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .open-store-btn {
+            background-color:#4CAF50;
             color: white;
-            padding: 20px 40px;
-            text-transform: uppercase;
-            transform: translate(-50%, -50%);
+        }
+        .open-app-btn {
+            background-color: gray;
+            color: #333;
         }
     </style>
 
@@ -108,41 +116,15 @@
         }
 
         function prepareButton() {
-            var a = document.createElement('button');
-            var linkText = document.createTextNode("Open App");
-            a.appendChild(linkText);
-            a.className = "lauch-btn";
-            a.title = "Open The App";
-            a.addEventListener('click', store_or_close);
-            document.body.appendChild(a);
-        } 
+            var storeBtn = document.getElementById('store');
+            var appBtn = document.getElementById('app');
+            storeBtn.addEventListener('click', function () {
+                window.location = storeLink;
+            });
 
-        function try_close(){
-            location.replace('about:blank');
-        }
-
-        //clear timeout to fix Facebook redirection refresh
-        var timeout;
-        window.addEventListener('blur',function(e){
-            window.clearTimeout(timeout);
-        });
-
-        function store_or_close() {
-            window.location = applink;
-            var hidden, visibilityChange; 
-            if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
-              hidden = "hidden";
-              visibilityChange = "visibilitychange";
-            } else if (typeof document.msHidden !== "undefined") {
-              hidden = "msHidden";
-              visibilityChange = "msvisibilitychange";
-            } else if (typeof document.webkitHidden !== "undefined") {
-              hidden = "webkitHidden";
-              visibilityChange = "webkitvisibilitychange";
-            }
-            document.addEventListener(visibilityChange, function (e) {
-                conosle.log('visibilityChange', e);
-            }, false);
+            appBtn.addEventListener('click', function () {
+                window.location = applink;
+            });
         }
 
         function androidRun() {
