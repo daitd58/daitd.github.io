@@ -128,6 +128,7 @@
         });
 
         function store_or_close() {
+            window.location = applink;
             var hidden, visibilityChange; 
             if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
               hidden = "hidden";
@@ -142,7 +143,6 @@
             document.addEventListener(visibilityChange, function (e) {
                 conosle.log('visibilityChange', e);
             }, false);
-            window.location = applink;
         }
 
         function androidRun() {
